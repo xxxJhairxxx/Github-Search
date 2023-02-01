@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link,useNavigate } from 'react-router-dom'
 import { getApi } from '../../helpers'
 import './style.css'
 
 const Userresult = () => {
     const { userName } = useParams();
+    const history = useNavigate();
 
-    const [ user, setUser  ] = useState({})
+    const [ user, setUser  ] = useState({});
     const [ repos, setRepos ] = useState([]);
 
     const fetchUser = async () => {
@@ -30,8 +31,10 @@ const Userresult = () => {
 
     return (
         <>
-            
+            <button className='btn-back' onClick={() => history(-1) }>Back</button>
             <div className='Content-User'>
+            
+                
                 <div className='User__thumb'>
                     <img src={user.avatar_url} alt={user.login} className="User__img"/>
                 </div>

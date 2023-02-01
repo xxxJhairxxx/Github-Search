@@ -1,10 +1,11 @@
-import { useEffect, useState } from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useEffect, useState} from 'react'
+import { useParams, Link,useNavigate   } from 'react-router-dom'
 import { getApi } from '../../helpers'
 import './style.css'
 
 const UsersResults = () => {
     const { name } = useParams();
+    const history = useNavigate()
 
     const [ User, setUser ] = useState([]);
 
@@ -20,7 +21,9 @@ const UsersResults = () => {
 
     return (
         
+        
         <div className='Content-users'>
+            <button className='btn-back' onClick={() => history(-1) }>Back</button>
             <div className='UsersControls'>
                 
                 <h1 className="Users__titulo">Resultado de la busqueda del usuario: @{name}</h1>

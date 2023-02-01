@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
-import { useParams,Link}  from "react-router-dom"
+import { useParams,Link,useNavigate }  from "react-router-dom"
 import { getApi } from "../../helpers";
 import './style.css'
 
 const Repositories = () => {
     const { repositoriesInfo } = useParams();
     const { userName } = useParams();
+    const history = useNavigate();
 
     const [ repositories, setRepositories ] = useState([]);
     const [ reposidates, setReposidates ] = useState({});
@@ -31,6 +32,8 @@ const Repositories = () => {
 
     return (
         <section className="Content__Repositorie">
+            
+            <button className='btn-back' onClick={() => history(-1) }>Back</button>
                 <h1 className="Repositorie__title">
                     {repositoriesInfo}
                 </h1>
