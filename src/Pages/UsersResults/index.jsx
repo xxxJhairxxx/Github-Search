@@ -3,7 +3,7 @@ import { useParams, Link,useNavigate   } from 'react-router-dom'
 import { getApi } from '../../helpers'
 import './style.css'
 
-const UsersResults = () => {
+const Usersresults = () => {
     const { name } = useParams();
     const history = useNavigate()
 
@@ -48,4 +48,4 @@ const UsersResults = () => {
     )
 }
 
-export default UsersResults
+export default Usersresults
