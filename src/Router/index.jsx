@@ -9,14 +9,12 @@ import Userresult from "../Pages/UserResult"
 export const Router = () => {
     
 
-    return (
-            <div>   
+    return (  
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/users/:name" element={<UsersResults />} /> 
                     <Route path="/user/:userName" element={<Userresult />}/>
                     <Route path="/repos/:userName/:repositoriesInfo" element={<Repositories />}/>
                 </Routes>
-            </div>
     )
 }
