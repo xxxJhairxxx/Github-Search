@@ -1,8 +1,8 @@
 import {Routes, Route} from "react-router-dom"
-import Home from "../Pages/home/"
-import Usersresults from "../Pages/usersresults/"
-import Repositories from "./../Pages/repositories/"
-import Userresult from "../Pages/userresult/"
+import Home from "./../Pages/home"
+import Usersresults from "./../Pages/usersresults"
+import Repositories from "./../Pages/repositories"
+import Userresult from "./../Pages/userresult"
 
 
 
