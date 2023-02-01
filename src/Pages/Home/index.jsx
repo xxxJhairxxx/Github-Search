@@ -27,7 +27,7 @@ const HomeSearch = () => {
                                 <input
                                 className="Home__search"
                                 onChange={(e) => setValor(e.target.value)}
-                                fullWidth
+                                
                                 placeholder="Buscar..." />
 
                                 <Link to={`/users/${valor}`} className="Home__link">
